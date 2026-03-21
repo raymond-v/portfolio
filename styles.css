@@ -15,6 +15,16 @@ html, body {
     0 0 20px #54a5ff;
 }
 
+/* Scroll reveal animation */
+.section {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.section.show {
+  opacity: 1;
+}
+
 /* Main content wrapper */
 .main-content {
   margin-left: 200px; /* space for fixed links */
@@ -79,7 +89,6 @@ hr {
   font-family: "Inter";
 }
 
-/* Fixed side links */
 .links-container {
   width: 200px;
   position: fixed;
@@ -144,21 +153,6 @@ hr {
   100% { transform: translateY(0px); }
 }
 
-/* Check arrow under avatar */
-.check {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.2rem;
-  margin-top: auto;
-}
-
-.check-text {
-  font-family: "Domine";
-  font-weight: bold;
-  margin: 0 auto;
-}
-
 /* Sub sections (Projects, Certifications, Contact) */
 .sub {
   max-width: 100%;
@@ -216,7 +210,6 @@ hr {
   border-radius: 10px;
 }
 
-/* Hover effect */
 .project-gallery img:hover {
   transform: scale(1.05);
 }
@@ -259,20 +252,6 @@ button:hover {
   text-align: right;
   opacity: 0.5;
   transition: color 0.5s ease;
-}
-
-.section {
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
-
-.section.show {
-  opacity: 1;
-}
-
-#home {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 .footer {

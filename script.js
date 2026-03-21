@@ -46,12 +46,15 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Scroll reveal animation
-  const sections = document.querySelectorAll(".section");
+  const sections = document.querySelectorAll(".section"); // select all sections
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if(entry.isIntersecting) entry.target.classList.add("show");
-    });
-  }, { threshold: 0.2 });
-  sections.forEach(section => observer.observe(section));
-
+      if(entry.isIntersecting){
+        entry.target.classList.add("show"); // fade in
+      } else {
+        entry.target.classList.remove("show"); // fade out when leaving
+      }
+      });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
 });
