@@ -1,0 +1,254 @@
+.trail {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background: #54a5ff;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px #54a5ff, 0 0 20px #54a5ff;
+  opacity: 0.8;
+  animation: fadeOut 0.5s linear forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+}
+
+.text-highlight {
+  text-shadow:
+    0 0 20px #54a5ff,
+    0 0 20px #54a5ff;
+}
+
+.main-content {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    position: relative;
+    min-height: 100vh;
+    color: #f0f0f0;
+}
+
+.opening {
+    max-width: 100%;
+    padding: 0 20%;
+    margin: 30px 0;
+    align-self: flex-start;
+}
+
+.opening-container {
+    display: inline-block;
+}
+
+.opening-header {
+    font-family: "Domine";
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.auto-type {
+    color: #54a5ff;
+}
+
+.typed-cursor {
+    color: #54a5ff;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #f0f0f0;
+  opacity: 1;
+}
+
+.about {
+    max-width: 100%;
+    padding: 0 20%;
+}
+
+.about-container {
+    display: inline-block;
+}
+
+.about-header {
+    font-family: "Domine";
+    font-size: 2rem;
+}
+
+.about-discription {
+    font-family: "Inter";
+}
+
+.links-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: fixed;
+}
+
+.links-container {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    background-color: #0f172a;
+    box-shadow: 2px 0 0 #f0f0f0;
+}
+
+.link {
+    align-self: flex-start;
+    margin: 1rem;
+    text-decoration: none;
+    color: #f0f0f0;
+    font-family: "domine";
+}
+
+.avatar-wrapper {
+    position: relative;
+    max-width: 100%;
+    padding: 0 20%;
+    overflow: hidden;
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#laptop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.avatar-wrapper:hover #avatar {
+    opacity: 0;
+}
+
+.avatar-wrapper:hover #laptop {
+    opacity: 1;
+}
+
+.float {
+    animation: floatAnimation 3s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+    0%   { transform: translateY(0px); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+.check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin-top: auto;
+}
+
+.check-text {
+    font-family: "Domine";
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #0f172a;
+}
+
+.sub {
+    max-width: 100%;
+    padding: 0 20%;
+    margin: 30px 0;
+}
+
+.sub-container {
+    display: inline-block;
+}
+
+.sub-header {
+    font-family: "Domine";
+}
+
+.list {
+    max-width: 100%;
+    padding: 0 20%;
+}
+
+.list-container {
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+}
+
+.list-header {
+    font-family: "Domine";
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.list-tag {
+    font-family: "Domine";
+    align-items: center;
+    font-size: 1rem;
+    font-style: italic;
+}
+
+.list-discription {
+    font-family: "Inter";
+}
+
+input,
+textarea,
+button {
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    border: 1px solid black;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 20px auto;
+    display: block;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid #54a5ff;
+    box-shadow:
+        0 0 10px #54a5ff,
+        0 0 20px #54a5ff;
+}
+
+button:hover {
+    outline: none;
+    border: 1px solid #54a5ff;
+    box-shadow:
+        0 0 10px #54a5ff,
+        0 0 20px #54a5ff;
+    cursor: pointer;
+}
+
+#charcount {
+  text-align: right;
+    opacity: 0.5;
+  transition: color 0.5s ease;
+}
