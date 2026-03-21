@@ -1,58 +1,223 @@
 <!DOCTYPE html>
-
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        <link href="styles.css" rel="stylesheet">
-        <title>My Webpage</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raymond Vuong Portfolio</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
 
-        <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<!-- Sidebar Links -->
+<div class="links-container">
+  <a class="link" href="#home">Home</a>
+  <a class="link" href="#projects">Projects</a>
+  <a class="link" href="#certifications">Certifications</a>
+  <a class="link" href="#contact">Contact</a>
+</div>
 
-    </head>
-    <body>
-        <div class="cursor"></div>
+<!-- HOME SECTION -->
+<div id="home" class="main-content section">
+  <div class="opening">
+    <div class="opening-container">
+      <h1 class="opening-header">Hi,</h1>
+      <h1 class="opening-header">I'm <span class="auto-type"></span></h1>
+    </div>
+  </div>
 
-        <div class="links-container">
-            <a class="link" href="index.html">Home</a>
-            <a class="link" href="projects.html">Projects</a>
-            <a class="link" href="certifications.html">Certifications</a>
-            <a class="link" href="contact.html">Contact</a>
-        </div>
+  <div class="about">
+    <hr>
+    <div class="about-container">
+      <h2 class="about-header">About Me</h2>
+      <p class="about-discription"><strong>Business Technology Management graduate</strong> from Toronto Metropolitan University, with experience in <strong>data analysis</strong> and <strong>systems design</strong>. Analytical and detail-oriented, with a passion for solving complex problems through technology. Highly effective in <strong>communication and collaboration</strong>.</p>
+    </div>
+  </div>
 
-        <div class="main-content">
-            <div class="opening">
-                <div class="opening-container">
-                    <h1 class="opening-header">Hi,</h1>
-                    <h1 class="opening-header">I'm <span class ="auto-type"></span></h1>
-                </div>
-            </div>
+  <div class="avatar-wrapper float">
+    <img src="images/avatar.png" class="avatar-img" id="avatar" alt="Raymond's Avatar">
+    <img src="images/laptop.png" class="avatar-img" id="laptop" alt="Raymond's Laptop">
+  </div>
 
-            <div class="about">
-                <hr>
-                <div class="about-container">
-                    <h2 class="about-header">About Me</h2>
-                    <p class="about-discription"><strong>Business Technology Management graduate</strong> from Toronto Metropolitan University,
-                    with experience in <strong>data analysis</strong> and <strong>systems design</strong>. Analytical and detail-oriented, with a passion for
-                    solving complex problems through technology. Highly effective in <strong>communication and collaboration</strong>, contributing
-                    successfully in team environments.</p>
-                </div>
-            </div>
+  <div class="check float">
+    <p class="check-text">Check out my work below</p>
+    <p class="check-text">↓</p>
+  </div>
+</div>
 
-            <div class="avatar-wrapper float">
-                <img src="images/avatar.png" class="avatar-img" id="avatar" alt="Raymond's Avatar">
-                <img src="images/laptop.png" class="avatar-img" id="laptop" alt="Raymond's Laptop">
-            </div>
+<!-- PROJECTS SECTION -->
+<div id="projects" class="main-content section">
+  <div class="sub">
+    <div class="sub-container">
+      <h1 class="sub-header">Projects</h1>
+    </div>
+  </div>
 
-            <div class="check float">
-                <p class="check-text">Check out my work below</p>
-                <p class="check-text">↓</p>
-            </div>
-        </div>
-        <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
-        <script src="script.js"></script>
-    </body>
+  <div class="list">
+    <hr>
+    <div class="list-container">
+      <p class="list-header">Roya Designs</p>
+      <span class="list-tag">Capstone Project</span>
+    </div>
+    <div class="list-discription">
+      <p>Designed a CRM-based client portal for Roya Designs to streamline client communication and improve operational efficiency. Conducted systems analysis, proposed centralized solutions, designed a database schema, created use case/sequence diagrams, and developed high-fidelity UI prototype in Figma.</p>
+      <p>Prototype screenshots are shown below.</p>
+    </div>
+  </div>
+    <div class="project-gallery">
+      <img src="images/prototype1.png" alt="Prototype 1">
+      <img src="images/prototype2.png" alt="Prototype 2">
+      <img src="images/prototype3.png" alt="Prototype 3">
+      <img src="images/prototype4.png" alt="Prototype 4">
+      <img src="images/prototype5.png" alt="Prototype 5">
+      <img src="images/prototype6.png" alt="Prototype 6">
+      <img src="images/prototype7.png" alt="Prototype 7">
+      <img src="images/prototype8.png" alt="Prototype 8">
+      <img src="images/prototype9.png" alt="Prototype 9">
+      <img src="images/prototype10.png" alt="Prototype 10">
+      <img src="images/prototype11.png" alt="Prototype 11">
+      <img src="images/prototype12.png" alt="Prototype 12">
+    </div>
+</div>
+
+<!-- CERTIFICATIONS SECTION -->
+<div id="certifications" class="main-content section">
+  <div class="sub">
+    <div class="sub-container">
+      <h1 class="sub-header">Certifications</h1>
+    </div>
+  </div>
+
+  <!-- Certification 1 -->
+  <div class="list">
+    <hr>
+    <div class="list-container">
+      <p class="list-header">CS50: Introduction to Computer Science</p>
+      <span class="list-tag">edX</span>
+    </div>
+    <div class="list-discription">
+      <p>
+        Completed Harvard's CS50 introductory computer science course, gaining experience in computational thinking, algorithms, data structures, and full-stack fundamentals. Applied programming concepts across languages, including C, Python, SQL, and JavaScript, and developed a final software project demonstrating proficiency in problem-solving and software design.
+      </p>
+    </div>
+  </div>
+
+  <!-- Certification 2 -->
+  <div class="list">
+    <hr>
+    <div class="list-container">
+      <p class="list-header">Python 2.0</p>
+      <span class="list-tag">TRSM Bootcamp</span>
+    </div>
+    <div class="list-discription">
+      <p>
+        Applied Python for data wrangling, aggregation, and visualization. Experience includes working with DataFrames, merging multiple datasets, building pivot tables, and plotting statistical insights using Pandas, Matplotlib, and Seaborn.
+      </p>
+    </div>
+  </div>
+
+  <!-- Certification 3 -->
+  <div class="list">
+    <hr>
+    <div class="list-container">
+      <p class="list-header">R 2.0</p>
+      <span class="list-tag">TRSM Bootcamp</span>
+    </div>
+    <div class="list-discription">
+      <p>
+        Utilized R for data wrangling, exploratory analysis, and visualization. Experience includes data frame manipulation, joins, handling missing values, and building a linear regression model to analyze structured datasets.
+      </p>
+    </div>
+  </div>
+
+  <!-- Certification 4 -->
+  <div class="list">
+    <hr>
+    <div class="list-container">
+      <p class="list-header">SQL 2.0</p>
+      <span class="list-tag">TRSM Bootcamp</span>
+    </div>
+    <div class="list-discription">
+      <p>
+        Applied SQL to query and analyze relational databases using statements such as SELECT, GROUP BY, ORDER BY, HAVING, and INNER JOIN. Experience includes data extraction, aggregation, and dataset manipulation within an RDBMS environment using DBeaver.
+      </p>
+    </div>
+  </div>
+
+  <!-- Certification 5 -->
+  <div class="list">
+    <hr>
+    <div class="list-container">
+      <p class="list-header">Power BI 2.0</p>
+      <span class="list-tag">TRSM Bootcamp</span>
+    </div>
+    <div class="list-discription">
+      <p>
+        Utilized Power BI to clean, model, and visualize structured datasets through dynamic dashboards. Experience includes DAX measures, calculated columns, relational data models, and moving average analysis to evaluate financial performance metrics.
+      </p>
+    </div>
+  </div>
+
+  <!-- Certification 6 -->
+  <div class="list">
+    <hr>
+    <div class="list-container">
+      <p class="list-header">Tableau 2.0</p>
+      <span class="list-tag">TRSM Bootcamp</span>
+    </div>
+    <div class="list-discription">
+      <p>
+        Applied Tableau to explore, clean, and visualize structured datasets through interactive dashboards. Experience includes KPI development, calculated fields, forecasting, parameterized dashboards, and multi-source data analysis to support business performance evaluation.
+      </p>
+    </div>
+  </div>
+
+  <!-- Certification 7 -->
+  <div class="list">
+    <hr>
+    <div class="list-container">
+      <p class="list-header">Power of Excel: Business Fundamentals Badge 2.0</p>
+      <span class="list-tag">TRSM Bootcamp</span>
+    </div>
+    <div class="list-discription">
+      <p>
+        Developed practical Excel skills in data analysis and visualization through hands-on business challenges. Experience includes PivotTables, conditional logic functions, lookup formulas, interactive dashboards, and introductory exposure to VBA, Power Query, and Power Pivot.
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<!-- CONTACT SECTION -->
+<div id="contact" class="main-content section">
+  <div class="sub">
+    <div class="sub-container">
+      <h1 class="sub-header">Contact</h1>
+    </div>
+  </div>
+
+  <div class="list">
+    <hr>
+    <div class="list-container">
+      <form id="contactForm" method="POST" action="https://api.staticforms.xyz/submit">
+        <input type="hidden" name="accessKey" value="sf_7443jc55f9hbmjj7ciji08ej">
+
+        <input type="text" placeholder="Your name" name="name" autocomplete= "off" required>
+        <input type="email" placeholder="Email@example.com" name="email" autocomplete= "off" required>
+        <input type="text" placeholder="Subject line" name="subject" autocomplete= "off" required>
+        <textarea id="message" placeholder="Enter message" name="message" maxlength="1000" autocomplete= "off" required></textarea>
+        <div id="charcount">0 / 1000</div>
+        <button type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+  <footer class="footer">&copy; 2026 Raymond Vuong | &lt;/&gt; HTML · CSS · JS </footer>   
+</div>
+
+<script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+<script src="script.js"></script>
+</body>
 </html>
