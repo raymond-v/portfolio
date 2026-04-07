@@ -114,33 +114,28 @@ hr {
 /* Avatar animation */
 .avatar-wrapper {
   position: relative;
-  max-width: 100%;
-  padding: 0 20%;
+  width: 50%;
+  max-width: 512px;
+  aspect-ratio: 1 / 1;
+  margin: 0 auto;
   overflow: hidden;
 }
 
 .avatar-img {
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  display: block;
+  object-fit: cover;
+  top: 0;
+  left: 0;
   transition: opacity 0.5s ease-in-out;
 }
 
-#laptop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
+#avatar { z-index: 1; opacity: 1; }
+#laptop { z-index: 2; opacity: 0; }
 
-.avatar-wrapper:hover #avatar {
-  opacity: 0;
-}
-
-.avatar-wrapper:hover #laptop {
-  opacity: 1;
-}
+.avatar-wrapper:hover #avatar { opacity: 0; }
+.avatar-wrapper:hover #laptop { opacity: 1; }
 
 /* Floating animation for avatar/check arrow */
 .float {
