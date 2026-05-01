@@ -18,16 +18,35 @@ html, body {
 /* Scroll reveal animation */
 .section {
   opacity: 0;
-  transition: opacity 0.8s ease;
+  transition: opacity 1s ease;
+  scroll-margin-top: 60px;
 }
 
 .section.show {
   opacity: 1;
 }
 
+/* Navbar */
+.custom-navbar {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Nav links */
+.custom-navbar .nav-link {
+  color: #54a5ff;
+  transition: all 0.2s ease;
+}
+
+/* Hover effect */
+.custom-navbar .nav-link:hover {
+  color: white;
+  transform: translateY(-2px);
+}
+
 /* Main content wrapper */
 .main-content {
-  margin-left: 200px; /* space for fixed links */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,28 +106,6 @@ hr {
 
 .about-discription {
   font-family: "Inter";
-}
-
-.links-container {
-  width: 200px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
-  background-color: #0f172a;
-  box-shadow: 2px 0 0 #f0f0f0;
-}
-
-.link {
-  align-self: flex-start;
-  margin: 1rem;
-  text-decoration: none;
-  color: #f0f0f0;
-  font-family: "Domine";
 }
 
 /* Avatar animation */
