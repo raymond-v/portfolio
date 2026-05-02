@@ -1,11 +1,11 @@
 /* Reset default browser spacing */
 html, body {
-  margin: 0;
-  padding: 0;
   scroll-behavior: smooth;
   background-color: #0f172a;
   color: #f0f0f0;
   font-family: "Inter";
+  margin: 0;
+  padding: 0;
 }
 
 /* Text highlight on hover */
@@ -15,17 +15,6 @@ html, body {
     0 0 20px #54a5ff;
 }
 
-/* Scroll reveal animation */
-.section {
-  opacity: 0;
-  transition: opacity 1s ease;
-  scroll-margin-top: 60px;
-}
-
-.section.show {
-  opacity: 1;
-}
-
 /* Navbar */
 .custom-navbar {
   background: rgba(0, 0, 0, 0.5);
@@ -33,34 +22,36 @@ html, body {
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Nav links */
 .custom-navbar .nav-link {
   color: #54a5ff;
   transition: all 0.2s ease;
 }
 
-/* Hover effect */
 .custom-navbar .nav-link:hover {
   color: white;
   transform: translateY(-2px);
 }
 
-/* Main content wrapper */
+/* Main layout */
 .main-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
-  position: relative;
   min-height: 100vh;
+  padding: 0 20vw;
 }
 
-/* Opening section */
+/* Sections */
+.opening,
+.about,
+.sub,
+.list {
+  width: 100%;
+}
+
+/* Opening */
 .opening {
-  max-width: 100%;
-  padding: 0 20%;
   margin: 30px 0;
-  align-self: flex-start;
 }
 
 .opening-container {
@@ -87,32 +78,27 @@ hr {
   height: 2px;
   background-color: #f0f0f0;
   opacity: 1;
+  width: 100%;
 }
 
-/* About section */
-.about {
-  max-width: 100%;
-  padding: 0 20%;
-}
-
+/* About */
 .about-container {
   display: inline-block;
 }
 
 .about-header {
   font-family: "Domine";
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 .about-discription {
   font-family: "Inter";
 }
 
-/* Avatar animation */
+/* Avatar */
 .avatar-wrapper {
   position: relative;
-  width: 50%;
-  max-width: 512px;
+  width: min(512px, 80vw);
   aspect-ratio: 1 / 1;
   margin: 0 auto;
   overflow: hidden;
@@ -134,7 +120,7 @@ hr {
 .avatar-wrapper:hover #avatar { opacity: 0; }
 .avatar-wrapper:hover #laptop { opacity: 1; }
 
-/* Floating animation for avatar/check arrow */
+/* Floating animation */
 .float {
   animation: floatAnimation 3s ease-in-out infinite;
 }
@@ -145,31 +131,24 @@ hr {
   100% { transform: translateY(0px); }
 }
 
-/* Sub sections (Projects, Certifications, Contact) */
+/* Sub sections */
 .sub {
-  max-width: 100%;
-  padding: 0 20%;
-  margin: 30px 0;
-}
-
-.sub-container {
   display: inline-block;
+  margin-top: 80px;
 }
 
 .sub-header {
+  text-align: center;
   font-family: "Domine";
+  font-size: 2.5rem;
 }
 
-/* Lists inside Projects/Certifications/Contact */
-.list {
-  max-width: 100%;
-  padding: 0 20%;
-}
-
+/* Lists */
 .list-container {
   display: flex;
   justify-content: space-between;
-  align-self: stretch;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .list-header {
@@ -180,7 +159,6 @@ hr {
 
 .list-tag {
   font-family: "Domine";
-  align-items: center;
   font-size: 1rem;
   font-style: italic;
 }
@@ -189,10 +167,11 @@ hr {
   font-family: "Inter";
 }
 
+/* Project gallery */
 .project-gallery {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  gap: 15px;
+  gap: 12px;
   margin-top: 20px;
 }
 
@@ -202,11 +181,21 @@ hr {
   border-radius: 10px;
 }
 
-.project-gallery img:hover {
-  transform: scale(1.05);
+/* Hover only for devices that support it */
+@media (hover: hover) {
+  .project-gallery img:hover {
+    transform: scale(1.05);
+  }
 }
 
-/* Forms (Contact section) */
+/* Forms */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 input,
 textarea,
 button {
@@ -246,6 +235,20 @@ button:hover {
   transition: color 0.5s ease;
 }
 
+/* Contact section */
+#contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact .sub-header {
+  text-align: center;
+  width: 100%;
+}
+
+/* Footer */
 .footer {
   text-align: center;
   padding: 1rem 0;
@@ -253,7 +256,27 @@ button:hover {
   font-size: 0.85rem;
   background-color: #0f172a;
   width: 100%;
-  position: absolute;  /* sticks to the bottom */
-  bottom: 0;
-  left: 0;
+}
+
+/* Mobile fix */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 0 1rem;
+  }
+
+  .opening-header {
+    font-size: 2rem;
+  }
+
+  .project-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .avatar-wrapper {
+    width: 85%;
+  }
+
+  .list-container {
+    flex-direction: column;
+  }
 }

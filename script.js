@@ -6,21 +6,28 @@ window.addEventListener("load", () => {
 document.addEventListener("DOMContentLoaded", function () {
 
   // Text highlight
-  document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, a').forEach(el => {
-    el.addEventListener('mouseenter', () => el.classList.add('text-highlight'));
-    el.addEventListener('mouseleave', () => el.classList.remove('text-highlight'));
-  });
+  document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, a')
+    .forEach(el => {
+      el.addEventListener('mouseenter', () => el.classList.add('text-highlight'));
+      el.addEventListener('mouseleave', () => el.classList.remove('text-highlight'));
+    });
 
   // Typed.js effect
   const el = document.querySelector(".auto-type");
-  if(el){
-    new Typed(".auto-type", { strings: ["Raymond Vuong"], typeSpeed: 200, backSpeed: 100, loop: true });
+  if (el) {
+    new Typed(".auto-type", {
+      strings: ["Raymond Vuong"],
+      typeSpeed: 200,
+      backSpeed: 100,
+      loop: true
+    });
   }
 
   // Contact form character counter
   const textarea = document.getElementById("message");
   const charCount = document.getElementById("charcount");
-  if(textarea && charCount){
+
+  if (textarea && charCount) {
     textarea.addEventListener("input", () => {
       const len = textarea.value.length;
       charCount.textContent = `${len} / 1000`;
@@ -30,31 +37,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Contact form submission
   const form = document.getElementById("contactForm");
-  if(form){
-    form.addEventListener("submit", async e => {
+
+  if (form && textarea && charCount) {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
+
       const formData = new FormData(form);
-      const response = await fetch(form.action, { method: "POST", body: formData });
-      if(response.ok){
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: formData
+      });
+
+      if (response.ok) {
         alert("Message sent!");
         form.reset();
         charCount.textContent = "0 / 1000";
+        charCount.style.color = "white";
       } else {
         alert("Oops! Something went wrong.");
       }
     });
   }
-
-  // Scroll reveal animation
-  const sections = document.querySelectorAll(".section"); // select all sections
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if(entry.isIntersecting){
-        entry.target.classList.add("show"); // fade in
-      } else {
-        entry.target.classList.remove("show"); // fade out when leaving
-      }
-      });
-    }, { threshold: 0.2 });
-    sections.forEach(section => observer.observe(section));
 });
