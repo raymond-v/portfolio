@@ -37,6 +37,19 @@ html, body {
   transform: translateY(-2px);
 }
 
+.custom-navbar .nav {
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: clamp(4px, 1vw, 12px);
+}
+
+.custom-navbar .nav-link {
+  flex: 0 1 auto;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  padding: clamp(4px, 1vw, 8px) clamp(6px, 1.5vw, 12px);
+  white-space: nowrap;
+}
+
 /* Main layout */
 .main-content {
   display: flex;
