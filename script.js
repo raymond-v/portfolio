@@ -58,4 +58,12 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }
+  
+  function setNavOffset() {
+    const nav = document.querySelector(".custom-navbar");
+    const height = nav.offsetHeight;
+    document.documentElement.style.setProperty("--nav-height", height + "px");
+  }
+  window.addEventListener("load", setNavOffset);
+  window.addEventListener("resize", setNavOffset);
 });
