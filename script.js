@@ -66,4 +66,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   window.addEventListener("load", setNavOffset);
   window.addEventListener("resize", setNavOffset);
+
+  const images = document.querySelectorAll(".project-gallery img");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  // Open image
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      lightbox.style.display = "flex";
+      lightboxImg.src = img.src;
+    });
+  });
+
+  // Close when clicking background
+  lightbox.addEventListener("click", () => {
+    lightbox.style.display = "none";
+    lightboxImg.src = "";
+  });
+
+  // Close with escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      lightbox.style.display = "none";
+      lightboxImg.src = "";
+    }
+  });
 });
