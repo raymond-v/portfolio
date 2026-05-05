@@ -129,14 +129,20 @@ hr {
   object-fit: cover;
   top: 0;
   left: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
 }
 
-#avatar { z-index: 1; opacity: 1; }
-#laptop { z-index: 2; opacity: 0; }
+/* Default state */
+#avatar { opacity: 1; z-index: 1; }
+#laptop { opacity: 0; z-index: 2; }
 
-.avatar-wrapper:hover #avatar { opacity: 0; }
-.avatar-wrapper:hover #laptop { opacity: 1; }
+/* active state */
+.avatar-wrapper.show-laptop #avatar {
+  opacity: 0;
+}
+.avatar-wrapper.show-laptop #laptop {
+  opacity: 1;
+}
 
 /* Floating animation */
 .float {
@@ -197,6 +203,8 @@ hr {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* Hover only for devices that support it */
@@ -210,7 +218,7 @@ hr {
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.70);
+  background: rgba(0, 0, 0, 0.85);
   display: none;
   justify-content: center;
   align-items: center;

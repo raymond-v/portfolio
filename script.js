@@ -4,7 +4,6 @@ window.addEventListener("load", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-
   // Text highlight
   document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, a')
     .forEach(el => {
@@ -26,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Contact form character counter
   const textarea = document.getElementById("message");
   const charCount = document.getElementById("charcount");
-
   if (textarea && charCount) {
     textarea.addEventListener("input", () => {
       const len = textarea.value.length;
@@ -37,17 +35,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Contact form submission
   const form = document.getElementById("contactForm");
-
   if (form && textarea && charCount) {
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
-
       const formData = new FormData(form);
       const response = await fetch(form.action, {
         method: "POST",
         body: formData
       });
-
       if (response.ok) {
         alert("Message sent!");
         form.reset();
@@ -59,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   
+  // Navbar scale
   function setNavOffset() {
     const nav = document.querySelector(".custom-navbar");
     const height = nav.offsetHeight;
@@ -67,10 +63,25 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("load", setNavOffset);
   window.addEventListener("resize", setNavOffset);
 
+  // Click and hover on images
+  const avatar = document.querySelector(".avatar-wrapper");
+  let isTouchDevice = window.matchMedia("(hover: none)").matches;
+  if (!isTouchDevice) {
+    avatar.addEventListener("mouseenter", () => {
+      avatar.classList.add("show-laptop");
+    });
+    avatar.addEventListener("mouseleave", () => {
+      avatar.classList.remove("show-laptop");
+    });
+  }
+  avatar.addEventListener("click", () => {
+    avatar.classList.toggle("show-laptop");
+  });
+
+  // Lightbox
   const images = document.querySelectorAll(".project-gallery img");
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.getElementById("lightbox-img");
-
   // Open image
   images.forEach(img => {
     img.addEventListener("click", () => {
@@ -78,13 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
       lightboxImg.src = img.src;
     });
   });
-
   // Close when clicking background
   lightbox.addEventListener("click", () => {
     lightbox.style.display = "none";
     lightboxImg.src = "";
   });
-
   // Close with escape key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
