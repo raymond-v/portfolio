@@ -55,7 +55,7 @@ html, body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: auto;
   padding: 0 20vw;
 }
 
@@ -158,7 +158,7 @@ hr {
 /* Sub sections */
 .sub {
   display: inline-block;
-  margin-top: 80px;
+  margin-top: 25px;
 }
 
 .sub-header {
@@ -239,15 +239,40 @@ form {
   align-items: center;
 }
 
-input,
-textarea,
-button {
+input {
   background-color: white;
   font-size: 20px;
   border-radius: 10px;
   border: 1px solid black;
   width: 100%;
   max-width: 500px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+textarea {
+  background-color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 100%;
+  max-width: 500px;
+  min-height: 200px;
+  padding: 10px;
+  margin: 20px auto;
+  display: block;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 50%;
+  max-width: 250px;
   padding: 10px;
   margin: 20px auto;
   display: block;
@@ -294,9 +319,9 @@ button:hover {
 /* Footer */
 .footer {
   text-align: center;
-  padding: 1rem 0;
+  padding-top: 10rem;
   color: #888;
-  font-size: 0.85rem;
+  font-size: 1rem;
   background-color: #0f172a;
   width: 100%;
 }
