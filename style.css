@@ -1,4 +1,4 @@
-/* Reset default browser spacing */
+/* Base styles */
 html, body {
   scroll-behavior: smooth;
   background-color: #0f172a;
@@ -8,7 +8,7 @@ html, body {
   padding: 0;
 }
 
-/* Text highlight on hover */
+/* Text highlight */
 .text-highlight {
   text-shadow:
     0 0 20px #54a5ff,
@@ -207,7 +207,7 @@ hr {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Hover only for devices that support it */
+/* Hover */
 @media (hover: hover) {
   .project-gallery img:hover {
     transform: scale(1.05);
@@ -239,8 +239,10 @@ form {
   align-items: center;
 }
 
-input {
+input,
+textarea {
   background-color: white;
+  color: black;
   font-size: 20px;
   border-radius: 10px;
   border: 1px solid black;
@@ -253,21 +255,12 @@ input {
 }
 
 textarea {
-  background-color: white;
-  font-size: 20px;
-  border-radius: 10px;
-  border: 1px solid black;
-  width: 100%;
-  max-width: 500px;
   min-height: 200px;
-  padding: 10px;
-  margin: 20px auto;
-  display: block;
-  box-sizing: border-box;
 }
 
 button {
   background-color: white;
+  color: black;
   font-size: 20px;
   border-radius: 10px;
   border: 1px solid black;
@@ -277,6 +270,7 @@ button {
   margin: 20px auto;
   display: block;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 input:focus,
@@ -326,7 +320,7 @@ button:hover {
   width: 100%;
 }
 
-/* Mobile fix */
+/* Mobile */
 @media (max-width: 768px) {
   .main-content {
     padding: 0 1rem;
