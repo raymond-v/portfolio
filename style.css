@@ -106,7 +106,7 @@ hr {
 
 .about-header {
   font-family: "Domine";
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
 .about-discription {
@@ -164,7 +164,7 @@ hr {
 .sub-header {
   text-align: center;
   font-family: "Domine";
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 /* Lists */
@@ -314,7 +314,7 @@ button:hover {
 /* Footer */
 .footer {
   text-align: center;
-  padding-top: 10rem;
+  padding-top: 9.5rem;
   color: #888;
   font-size: 1rem;
   background-color: #0f172a;
@@ -329,6 +329,14 @@ button:hover {
 
   .opening-header {
     font-size: 2rem;
+  }
+
+  .about-header {
+    font-size: 1.5rem;
+  }
+
+  .sub-header {
+    font-size: 2rem
   }
 
   .project-gallery {
